@@ -4,6 +4,8 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/shared/Navbar";
 import "./globals.css";
+import "@/styles/mdx.css";
+
 import Footer from "@/components/shared/Footer";
 
 export const fontSans = FontSans({

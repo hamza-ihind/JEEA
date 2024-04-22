@@ -12,12 +12,12 @@ const socials = [
 const Hero = () => {
   return (
     <main className="h-[100vh] w-full flex items-center justify-around p-24">
-      <div className="max-w-[60%] flex flex-col gap-8">
+      <div className="max-w-[60%] flex flex-col items-center gap-8">
         <h1 className="hero-title dark:hero-title-dark">
           FOR EVERY PROBLEM <br />
           WE ENGINEER A SOLUTION
         </h1>
-        <p className="text-left text-xl leading-7 text-blue-700 dark:text-blue-300">
+        <p className="text-center text-xl leading-7 text-blue-700 dark:text-blue-300">
           Teaming up with Junior Enterprise ENSA Agadir is your way to get hold
           of a wide range of skills provided by future engineers in different
           fields.
@@ -43,9 +43,6 @@ const Hero = () => {
             <Image key={index} src={item} alt="photo" width={32} height={32} />
           ))}
         </div>
-      </div>
-      <div className="">
-        <Image src="/assets/chess.svg" width={500} height={500} alt="bg" />
       </div>
     </main>
   );

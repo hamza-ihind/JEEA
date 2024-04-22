@@ -20,7 +20,6 @@ const Courses = () => {
   return (
     <div className="relative flex w-full h-[100%] flex-col items-center justify-center gap-3 p-16 max-lg:p-8">
       <Title
-        title="Notre Trésor Éducatif"
         subtitle="Ressources Essentielles pour les Étudiants"
         description="Explorez notre collection diversifiée de résumés, exercices pratiques et aides de cours pour soutenir votre apprentissage et vous aider à exceller dans vos études académiques."
       />

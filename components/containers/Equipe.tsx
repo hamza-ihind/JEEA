@@ -55,7 +55,6 @@ const Equipe: React.FC = () => {
   return (
     <div className="relative flex w-full h-[100vh] flex-col items-center justify-center gap-3 p-16 max-lg:p-8">
       <Title
-        title="Rencontrez Notre Équipe"
         subtitle="Rencontrez Notre Équipe Dédiée"
         description="Découvrez les membres talentueux et passionnés qui collaborent pour créer une expérience éducative exceptionnelle."
       />
