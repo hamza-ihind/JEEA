@@ -12,7 +12,7 @@ export const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Compil'Court",
+  title: "JEEA",
   description: "Your road to success, made by Hamza Ihind",
 };
 

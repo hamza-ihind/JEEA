@@ -22,15 +22,21 @@ interface ComponentItem {
   description: string;
 }
 
-const courses: ComponentItem[] = [
+const poles: ComponentItem[] = [
   {
-    title: "Première Année",
-    href: "/courses/#cp1",
+    title: "Informatique",
+    href: "/poles/info",
     description: "La page contenant tous les exercices de tout les modules",
   },
   {
-    title: "Deuxième année",
-    href: "/courses/#cp2",
+    title: "Design & Montage",
+    href: "/poles/design",
+    description:
+      "For sighted users to preview content available behind a link.",
+  },
+  {
+    title: "Rédaction, Traduction, Correction",
+    href: "/poles/rtc",
     description:
       "For sighted users to preview content available behind a link.",
   },
@@ -75,19 +81,19 @@ interface ListItemProps extends React.ComponentPropsWithoutRef<"a"> {
 
 const Navbar: React.FC = () => {
   return (
-    <div className="z-20 flex backdrop-blur-[25px] fixed w-full h-16 justify-between px-32 items-center shrink-0 border-b border-solid border-zinc-800">
+    <div className="z-20 flex backdrop-blur-[25px] fixed w-full h-16 justify-between px-64 items-center shrink-0 border-b border-solid border-zinc-800">
       <NavigationMenu>
         <NavigationMenuList>
           <Image
-            src="/FSF.svg"
+            src="/assets/logo.png"
             alt="logo"
-            width={40}
+            width={90}
             height={20}
             className="mr-8"
           />
           <NavigationMenuItem>
             <NavigationMenuTrigger className={`bg-transparent`}>
-              Compil'Court
+              JEEA
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -98,27 +104,25 @@ const Navbar: React.FC = () => {
                       href="/"
                     >
                       <Image
-                        src="/logo-black.svg"
+                        src="/assets/logo.png"
                         alt="logo"
-                        width={82}
+                        width={120}
                         height={48}
                       />
-                      <div className="mb-2 mt-4 text-lg font-medium">
-                        ALEPHNULL
-                      </div>
+                      <div className="mb-2 mt-4 text-lg font-medium">JEEA</div>
                       <p className="text-sm leading-tight text-muted-foreground">
                         Apprendre sans limites. Evoluer sans frontières.
                       </p>
                     </a>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="/docs" title="C'est quoi ALEPHNULL">
+                <ListItem href="/services" title="Services">
                   Re-usable components built using Radix UI and Tailwind CSS.
                 </ListItem>
-                <ListItem href="/docs/installation" title="Equipe">
+                <ListItem href="/activities" title="Activités">
                   How to install dependencies and structure your app.
                 </ListItem>
-                <ListItem href="/docs/primitives/typography" title="Courses">
+                <ListItem href="/formations" title="Formations">
                   Styles for headings, paragraphs, lists...etc
                 </ListItem>
               </ul>
@@ -126,11 +130,11 @@ const Navbar: React.FC = () => {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger className={`bg-transparent`}>
-              Cycle préparatoire
+              Pôles
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {courses.map((component) => (
+                {poles.map((component) => (
                   <ListItem
                     key={component.title}
                     title={component.title}
@@ -143,20 +147,38 @@ const Navbar: React.FC = () => {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/Alephcom" passHref>
+            <Link href="/blog" passHref>
               <NavigationMenuLink
                 className={`${navigationMenuTriggerStyle()} bg-transparent`}
               >
-                Cycle d'ingénieur
+                Blog
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/Dashboard" passHref>
+            <Link href="/services" passHref>
               <NavigationMenuLink
                 className={`${navigationMenuTriggerStyle()} bg-transparent`}
               >
-                Equipe
+                Services
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/portfolio" passHref>
+              <NavigationMenuLink
+                className={`${navigationMenuTriggerStyle()} bg-transparent`}
+              >
+                Portfolio
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/team" passHref>
+              <NavigationMenuLink
+                className={`${navigationMenuTriggerStyle()} bg-transparent`}
+              >
+                Recrutement
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -164,7 +186,7 @@ const Navbar: React.FC = () => {
       </NavigationMenu>
 
       <NavigationMenu className="flex gap-4">
-        <Link href="/sign-up" passHref>
+        <Link href="/contact" passHref>
           <Button variant={"default"}>Contactez-nous</Button>
         </Link>
         <ModeToggle />

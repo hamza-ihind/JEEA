@@ -2,7 +2,6 @@
 
 import React from "react";
 
-import { cp1_modules } from "@/components/database/modules";
 import CourseCard from "../CourseCard";
 
 import {
@@ -27,7 +26,7 @@ const Courses = () => {
       />
       <Carousel className="mt-16 w-[75%]">
         <CarouselContent>
-          {cp1_modules.map((element: any) => {
+          {/* {cp1_modules.map((element: any) => {
             return (
               <CarouselItem className="md:basis-1/1 lg:basis-1/2 xl:basis-1/3 p-8">
                 <Link href={`/courses/${element.courseId}`}>
@@ -43,7 +42,7 @@ const Courses = () => {
                 </Link>
               </CarouselItem>
             );
-          })}
+          })} */}
         </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />

@@ -2,7 +2,56 @@ import React from "react";
 import Title from "../shared/Title";
 import Image from "next/image";
 
-const Equipe = () => {
+type SocialIconProps = {
+  src: string;
+  alt: string;
+};
+
+const SocialIcon: React.FC<SocialIconProps> = ({ src, alt }) => (
+  <Image src={src} alt={alt} height={24} width={24} />
+);
+
+type TeamMemberProps = {
+  name: string;
+  position: string;
+  description: string;
+  imageSrc: string;
+};
+
+const TeamMember: React.FC<TeamMemberProps> = ({
+  name,
+  position,
+  description,
+  imageSrc,
+}) => (
+  <div className="flex flex-col items-center gap-5 w-[40%]">
+    <Image
+      src={imageSrc}
+      alt={name}
+      height={160}
+      width={160}
+      className="rounded-full border-primary border-2"
+    />
+    <div className="flex flex-col items-center gap-4 self-stretch">
+      <div className="flex flex-col items-center">
+        <p className="text-2xl font-semibold text-gray-900 dark:text-gray-200">
+          {name}
+        </p>
+        <p className="text-base font-semibold text-primary">{position}</p>
+        <p className="mt-3 text-center text-base font-normal text-gray-500 dark:text-gray-400 leading-normal">
+          {description}
+        </p>
+        <div className="flex gap-4 mt-4">
+          <SocialIcon src="/socials/instagram.png" alt="instagram" />
+          <SocialIcon src="/socials/medium.png" alt="medium" />
+          <SocialIcon src="/socials/linkedin.png" alt="linkedin" />
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+const Equipe: React.FC = () => {
   return (
     <div className="relative flex w-full h-[100vh] flex-col items-center justify-center gap-3 p-16 max-lg:p-8">
       <Title
@@ -11,96 +60,18 @@ const Equipe = () => {
         description="Découvrez les membres talentueux et passionnés qui collaborent pour créer une expérience éducative exceptionnelle."
       />
       <div className="mt-24 w-[90%] flex justify-around">
-        <div className="flex flex-col items-center gap-5 w-[40%]">
-          <Image
-            src="/team/Ihind.jpeg"
-            alt="Hamza"
-            height={160}
-            width={160}
-            className="rounded-full border-2 border-primary"
-          />
-          <div className="flex flex-col items-center gap-4 self-stretch">
-            <div className="flex flex-col items-center">
-              <p className="text-2xl font-semibold text-gray-900 dark:text-gray-200">
-                Hamza Ihind
-              </p>
-              <p className="text-base font-semibold text-primary">
-                Développeur • Génie mécanique
-              </p>
-              <p className="mt-3 text-center text-base font-normal text-gray-500 dark:text-gray-400 leading-normal">
-                Représentant APPSCLUB ENSA Agadir. Passionné par l'informatique
-                et la psychologie, développeur web. Alliant expertise technique
-                et compréhension humaine pour créer des expériences web
-                exceptionnelles.
-              </p>
-              <div className="flex gap-4 mt-4">
-                <Image
-                  src="/socials/instagram.png"
-                  alt="instagram"
-                  height={24}
-                  width={24}
-                />
-                <Image
-                  src="/socials/medium.png"
-                  alt="instagram"
-                  height={24}
-                  width={24}
-                />
-                <Image
-                  src="/socials/linkedin.png"
-                  alt="instagram"
-                  height={24}
-                  width={24}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col items-center gap-5 w-[40%]">
-          <Image
-            src="/team/Founani.jpeg"
-            alt="Hamza"
-            height={160}
-            width={160}
-            className="rounded-full border-primary border-2"
-          />
-          <div className="flex flex-col items-center gap-4 self-stretch">
-            <div className="flex flex-col items-center">
-              <p className="text-2xl font-semibold text-gray-900 dark:text-gray-200">
-                Mohammed El Founani
-              </p>
-              <p className="text-base font-semibold text-primary">
-                Fondateur • Créateur de Contenu • Génie mécanique
-              </p>
-              <p className="mt-3 text-center text-base font-normal text-gray-500 dark:text-gray-400 leading-normal">
-                Représentant Club FSF ENSA Agadir. Passionné par LaTeX, la
-                physique théorique, et le génie mécanique. Il excelle dans la
-                communication scientifique, la modélisation et l'exploration des
-                sciences appliquées.
-              </p>
-              <div className="flex gap-4 mt-4">
-                <Image
-                  src="/socials/instagram.png"
-                  alt="instagram"
-                  height={24}
-                  width={24}
-                />
-                <Image
-                  src="/socials/medium.png"
-                  alt="instagram"
-                  height={24}
-                  width={24}
-                />
-                <Image
-                  src="/socials/linkedin.png"
-                  alt="instagram"
-                  height={24}
-                  width={24}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+        <TeamMember
+          name="Hamza Ihind"
+          position="Développeur • Génie mécanique"
+          description="Président de JEEA. Passionné par l'informatique et la psychologie, développeur web. Alliant expertise technique et compréhension humaine pour créer des expériences web exceptionnelles."
+          imageSrc="/team/Ihind.jpg"
+        />
+        <TeamMember
+          name="Zakaria Ahrbil"
+          position="Designer • Génie Informatique"
+          description="Responsable Media en JEEA. Passionné par LaTeX, la physique théorique, et le génie mécanique. Il excelle dans la communication scientifique, la modélisation et l'exploration des sciences appliquées."
+          imageSrc="/team/Ahrbil.png"
+        />
       </div>
     </div>
   );
