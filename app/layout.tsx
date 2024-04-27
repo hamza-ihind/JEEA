@@ -7,6 +7,7 @@ import "./globals.css";
 import "@/styles/mdx.css";
 
 import Footer from "@/components/shared/Footer";
+import Naavbar from "@/components/shared/Naavbar";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -32,7 +33,7 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Navbar />
+          <Naavbar />
           {children}
           <Footer />
         </ThemeProvider>

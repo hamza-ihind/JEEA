@@ -1,6 +1,6 @@
 [
   {
-    "slug": "activities/hello-world copy 2",
+    "slug": "formations/hello-world copy 2",
     "title": "L'Éclosion de JEEA à l'ENSA Agadir",
     "description": "Revivez l'événement inaugural de la Junior Entreprise ENSA Agadir (JEEA) à l'ENSA Agadir, où l'énergie, l'enthousiasme et la passion pour l'entrepreneuriat étudiant étaient à l'honneur.",
     "date": "2021-11-18T00:00:00.000Z",
@@ -16,7 +16,7 @@
     "slugAsParams": "hello-world copy 2"
   },
   {
-    "slug": "activities/hello-world copy",
+    "slug": "formations/hello-world copy",
     "title": "L'Éclosion de JEEA à l'ENSA Agadir",
     "description": "Revivez l'événement inaugural de la Junior Entreprise ENSA Agadir (JEEA) à l'ENSA Agadir, où l'énergie, l'enthousiasme et la passion pour l'entrepreneuriat étudiant étaient à l'honneur.",
     "date": "2021-11-18T00:00:00.000Z",
@@ -32,8 +32,8 @@
     "slugAsParams": "hello-world copy"
   },
   {
-    "slug": "activities/hello-world",
-    "title": "L'Éclosion de JEEA à l'ENSA Agadir",
+    "slug": "formations/hello-world",
+    "title": "l'ENSA Agadir",
     "description": "Revivez l'événement inaugural de la Junior Entreprise ENSA Agadir (JEEA) à l'ENSA Agadir, où l'énergie, l'enthousiasme et la passion pour l'entrepreneuriat étudiant étaient à l'honneur.",
     "date": "2021-11-18T00:00:00.000Z",
     "published": true,

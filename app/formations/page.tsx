@@ -1,4 +1,4 @@
-import { activities } from "#site/content";
+import { formations } from "#site/content";
 import Title from "@/components/shared/Title";
 import { PostItem } from "./post-item";
 import Image from "next/image";
@@ -10,7 +10,7 @@ import Image from "next/image";
 // import { Metadata } from "next";
 
 export default async function BlogPage() {
-  const displayPosts = activities;
+  const displayPosts = formations;
 
   return (
     <div className="relative page-config">

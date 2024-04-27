@@ -1,4 +1,4 @@
-import { activities } from "#site/content";
+import { formations } from "#site/content";
 import { MDXContent } from "@/lib/mdx/mdx-components";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -16,7 +16,7 @@ interface PostPageProps {
 
 async function getPostFromParams(params: PostPageProps["params"]) {
   const slug = params?.slug?.join("/");
-  const post = activities.find((post: any) => post.slugAsParams === slug);
+  const post = formations.find((post: any) => post.slugAsParams === slug);
 
   return post;
 }
@@ -63,7 +63,7 @@ export async function generateMetadata({
 export async function generateStaticParams(): Promise<
   PostPageProps["params"][]
 > {
-  return activities.map((post) => ({ slug: post.slugAsParams.split("/") }));
+  return formations.map((post) => ({ slug: post.slugAsParams.split("/") }));
 }
 
 export default async function PostPage({ params }: PostPageProps) {
@@ -75,6 +75,8 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <div className="relative page-config">
+      <div className="absolute w-[600px] h-[600px] bg-amber-300 rounded-full blur-[500px] opacity-70 top-[-250px]" />
+
       <Title subtitle={post.title} description={post.description || ""} />
       <div className="flex gap-2 mt-4">
         {post.tags?.map((tag, index) => (

@@ -22,39 +22,6 @@ interface ComponentItem {
   description: string;
 }
 
-const poles: ComponentItem[] = [
-  {
-    title: "Informatique",
-    href: "/poles/info",
-    description: "La page contenant tous les exercices de tout les modules",
-  },
-  {
-    title: "Design & Montage",
-    href: "/poles/design",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Rédaction, Traduction, Correction",
-    href: "/poles/rtc",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-];
-
-const microLearning: ComponentItem[] = [
-  {
-    title: "Cheat Sheets",
-    href: "/Microlearning/Cheats",
-    description: "La page contenant tous les exercices de tout les modules",
-  },
-  {
-    title: "Mind Maps",
-    href: "/Microlearning/Mindmaps",
-    description: "La page contenant tous les exercices de tout les modules",
-  },
-];
-
 const ListItem: React.FC<ListItemProps> = ({ title, children, ...props }) => {
   return (
     <li>
